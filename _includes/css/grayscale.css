@@ -57,6 +57,10 @@ a:focus {
     color: #11505d;
 }
 
+.pad-top {
+  margin-top: 50px;
+}
+
 .light {
     font-weight: 400;
 }
@@ -65,6 +69,7 @@ a:focus {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
+    height: 95px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: {{ site.color.primary-dark }};
 }
