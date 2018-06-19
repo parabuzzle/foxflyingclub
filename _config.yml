@@ -1,0 +1,17 @@
+# Site settings
+title: Fox Flying Club
+email: foxflyingclub@gmail.com
+url: https://www.foxflying.com
+description: "A member-owned non-profit flying club with a fleet of three well-maintained, affordably-priced aircraft."
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary-dark: '#000000'
+  links: '#219ab3'
+
+# Footer settings
+footer: Fox Flying Club
+
+# Build settings
+markdown: kramdown
+permalink: pretty
