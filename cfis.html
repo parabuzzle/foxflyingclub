@@ -1,5 +1,18 @@
 ---
 layout: page
+cfis: 
+  - Berenson David,CFII,deberenson@yahoo.com
+  - Eure Annalise,CFII,annalise.weck@gmail.com
+  - Gooch	David,CFI,gooch737@gmail.com
+  - Hight	Derrick,CFII,firefytr906@aol.com
+  - Kline	Terry,CFII,terrence_kline@yahoo.com
+  - Leshchenko Vladimir,CFII,vlad.lesh@gmail.com
+  - Palumbo	Gary,CFII,akromech@sbcglobal.net
+  - Schmitt	Gerard,CFII,glschmitt@sbcglobal.net
+  - Schroeder Brad,CFII,brads147@comcast.net
+  - Sorensen Timothy,CFII,tim.sorensen@sbcglobal.net
+  - Werneth	Robert,CFII,rmwerneth@gmail.com
+  - Winsor Tom,CFII,winsortc@gmail.com
 ---
 
 <div class="row">
@@ -8,83 +21,18 @@ layout: page
     <table class="table">
       <tr>
         <th>Instructor</th>
-        <th>CFII?</th>
+        <th>Rating</th>
         <th>Contact</th>
-        <th>Availability</th>
       </tr>
-
-      <tr>
-        <td>Jonathon Charnes</td>
-        <td>YES</td>
-        <td>Home (708) 452-8608 <br/>sciencemancps@yahoo.com</td>
-        <td>24/7 <br/>Tailwheel & Aerobatics</td>
-      </tr>
-      <tr>
-        <td>Rich Dyrda</td>
-        <td>YES</td>
-        <td>rsdyrda@gmail.com</td>
-        <td>Evenings/Weekends (3 days notice)</td>
-      </tr>
-      <tr>
-        <td>Derrick Hight</td>
-        <td>YES</td>
-        <td>firefytr906@aol.com</td>
-        <td>Variable - please contact</td>
-      </tr>
-      <tr>
-        <td>Vlad Leschenko</td>
-        <td>YES</td>
-        <td>vlad.lesh@gmail.com</td>
-        <td>TBD</td>
-      </tr>
-      <tr>
-        <td>Pete McVay</td>
-        <td>YES</td>
-        <td>mcvay3@att.net</td>
-        <td>Select Days/Weekends</td>
-      </tr>
-      <tr>
-        <td>Gary Palumbo</td>
-        <td>YES</td>
-        <td>akromech@sbcglobal.net</td>
-        <td>Any morning until noon</td>
-      </tr>
-      <tr>
-        <td>Brad Schroeder</td>
-        <td>YES</td>
-        <td>brads147@comcast.net</td>
-        <td>Evenings/Weekends</td>
-      </tr>
-      <tr>
-        <td>Annalise Weck</td>
-        <td>YES</td>
-        <td>annalise.weck@gmail.com</td>
-        <td>TBD</td>
-      </tr>
-      <tr>
-        <td>Thomas Winsor</td>
-        <td>YES</td>
-        <td>winsortc@gmail.com</td>
-        <td>TBD</td>
-      </tr>
-      <tr>
-        <td>David Berenson</td>
-        <td>YES</td>
-        <td>deberenson@yahoo.com</td>
-        <td>TBD</td>
-      </tr>
-      <tr>
-        <td>David Gooch</td>
-        <td>NO</td>
-        <td>gooch737@gmail.com</td>
-        <td>TBD</td>
-      </tr>
-      <tr>
-        <td>Terry Kline</td>
-        <td>YES</td>
-        <td>terrence_kline@yahoo.com</td>
-        <td>TBD</td>
-      </tr>
+      {% for cfi in page.cfis %}
+        {% assign cfi_split = cfi | split: "," %}
+        {% assign cfi_name = cfi_split[0] | split: " " | reverse | join: " " %}
+        <tr>
+          <td>{{cfi_name}}</td>
+          <td>{{cfi_split[1]}}</td>
+          <td>{{cfi_split[2]}}</td>
+        </tr>
+      {% endfor %}
     </table>
     Please see the Fox Flying Club roster or check user information on <a href="http://www.schedulemaster.com/smlogin.htm">ScheduleMaster</a> for telephone numbers.
     <br/><br/>
